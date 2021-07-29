@@ -19,22 +19,20 @@
       differences between the posts during opioid use and the posts after opioid use.
       
     <h2>Data</h2>
-    <p>In order to collect posts from r/Opiates and r/OpiatesRecovery, pushshift.io API and Python Reddit API Wrapper (PRAW) were utilized.
-      
-  Pushshift.io al-
-lowed parameters of posts within the desired time frame to be scraped; these parameters
-included the post ID, date the post was created, the author, and the number of comments,
-but did not include the body of the post. In order to extract the body, PRAW sourced the
-post IDs that were collected through pushshift.io to search through Reddit, nd the posts
-of interest, and scrape the body of these posts.
-Before beginning any analysis, the datasets needed to be pre-processed. First, any rows
-that contained a null value for the body column were removed. After the removal of the
-rows, the Opiates dataset consists of 31,815 posts by 13,045 unique users and the Recovery
-dataset consists of 10,266 posts by 4,596 unique users. Second, the date was converted from
-UNIX format to date/time format. Third, the body of the posts were cleaned. The cleaning
-process involved the following steps: remove URLs, remove special characters and numbers,
-fix instances where a character appears consecutively three or more times in a single word
-('aaaaaah' transforms into 'aah'), expand contractions, and remove common words.</p>
+    <p>Posts that fell into the timespan of January 1, 2020 - May 31, 2021 were gethered. In order to collect posts 
+      from a specific time frame, pushshift.io API and Python Reddit API Wrapper (PRAW) were utilized. Pushshift.io 
+      allows for certain parameters to be scraped from historical data; these parameters include the post ID, the date
+      the post was created, the author of the post, and the number of comments attached to the post, but does not include
+      the body of the post. To extract the body of the posts, the post IDs collected through pushshift.io were looped 
+      through PRAW and PRAW used the IDs to search through Reddit, find the posts of interest, and scrape the body of these posts.</p>
+    
+    <p>Before beginning any analysis, the datasets needed to be pre-processed. First, any rows that contained a null 
+      value for the body column were removed. After the removal of the rows, the Opiates dataset consists of 31,815 
+      posts by 13,045 unique users and the Recovery dataset consists of 10,266 posts by 4,596 unique users. Second, 
+      the date was converted from UNIX format to date/time format. Third, the body of the posts were cleaned. The cleaning
+      process involved the following steps: remove URLs, remove special characters and numbers, fix instances where a character 
+      appears consecutively three or more times in a single word ('aaaaaah' transforms into 'aah'), expand contractions, and remove common words.</p>
+
     
     <h2>Sentiment Analysis</h2>
     
