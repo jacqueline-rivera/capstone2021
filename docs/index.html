@@ -32,10 +32,29 @@
       posts by 13,045 unique users and the Recovery dataset consists of 10,266 posts by 4,596 unique users. Second, 
       the date was converted from UNIX format to date/time format. Third, the body of the posts were cleaned. The cleaning
       process involved the following steps: remove URLs, remove special characters and numbers, fix instances where a character 
-      appears consecutively three or more times in a single word ('aaaaaah' transforms into 'aah'), expand contractions, and remove common words.</p>
+      appears consecutively three or more times in a single word ('aaaaaah' transforms into 'aah'), expand contractions, 
+      and remove common words.</p>
 
     
     <h2>Sentiment Analysis</h2>
+    <p>Each post was given a label: -1 for negative sentiment, 0 for neutral sentiment, and 1 for positive sentiment. 
+      These labels were used to calculate the overall sentiment for each subreddit. The percentage of posts that were positive 
+      and the percentage of posts that were negative were calculated and displayed below. Overall, Recovery has a higher 
+      percentage of positive posts while Opiates has a higher percentage of negative posts.
+    
+After arriving at an overview of the sentiment for the subreddits, we can now examine
+a monthly breakdown and identify any changes throughout the time period of the dataset.
+In a separate data frame, the posts were aggregated by month: total number of posts per
+month, total number of negative posts per month, the percentage of total posts that were
+negative per month, total number of positive posts per month, and the percentage of total posts that were positive per month.
+Plotting the monthly sentiment (Figures 9 and 10) exhibits that Recovery almost always
+holds a higher percentage of positive posts and Opiates holds a higher percentage of negative
+posts up until July 2021. At this point, the percentage of negative sentiment from both
+subreddits meet. Although the COVID pandemic is not a focus for this project, t-tests were
+performed on the sentiment pre-quarantine and post-quarantine, with the cut o month
+being March 2020. There was a statistically signicant dierence in the negative sentiment
+and positive sentiment for Recovery{positive sentiment dropped and negative sentiment
+increased. There was no signicant change in the sentiment of Opiates.</p>
     
     <h2>Word Networks</h2>
     <p>Examples of word networks created for opiates can be found <a href="https://jacqueline-rivera.github.io/capstone2021/opiates_noun_word_network.html">here</a>
