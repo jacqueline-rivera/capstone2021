@@ -9,23 +9,23 @@
     
     <h2>Introduction</h2>
     <p>The opioid crisis in America was officially declared a public health emergency on October 26, 2017. 
-      The number of opioid related, drug overdose deaths continue to climb and with numbers on the rise, 
-      there is a need to improve treatments and interventions. Reddit is a network of communities, or subreddits, 
+      The number of opioid overdose deaths continue to climb and with numbers on the rise, 
+      there is a need to improve treatments and interventions. Reddit is a network of communities, called subreddits, 
       where groups of people can gather and communicate anonymously. Exploring subreddits dedicated to opioids 
       can provide insights into the social workings of opioid users. This project aims to get a deeper understanding 
-      of opioid users by analyzing the words they use in two subreddits: <a href="https://www.reddit.com/r/opiates/">r/Opiates</a> 
+      of opioid users by analyzing the words used in two subreddits: <a href="https://www.reddit.com/r/opiates/">r/Opiates</a> 
       and <a href="https://www.reddit.com/r/OpiatesRecovery/">r/OpiatesRecovery</a>. 
       These two subreddits were chosen in the interest of comparison. The goal is to identify any measurable
       differences between the posts during opioid use and the posts after opioid use. If there are any differences, 
       can these differences help improve treatments and interventions?
       
     <h2>Data</h2>
-    <p>Posts that fell into the timespan of January 1, 2020 - May 31, 2021 were gethered. In order to collect posts 
-      from a specific time frame, pushshift.io API and Python Reddit API Wrapper (PRAW) were utilized. Pushshift.io 
-      allows for certain parameters to be scraped from historical data; these parameters include the post ID, the date
-      the post was created, the author of the post, and the number of comments attached to the post, but does not include
-      the body of the post. To extract the body of the posts, the post IDs collected through pushshift.io were looped 
-      through PRAW and PRAW used the IDs to search through Reddit, find the posts of interest, and scrape the body of these posts.</p>
+    <p>In order to collect posts that fell into the timespan of January 1, 2020 - May 31, 2021, pushshift.io API and 
+      Python Reddit API Wrapper (PRAW) were utilized. Pushshift.io allows for certain parameters to be scraped from 
+      historical data; these parameters include the post ID, the date the post was created, the author of the post, 
+      and the number of comments attached to the post, but does not include the body of the post. To extract the body 
+      of the posts, the post IDs collected through pushshift.io were looped through PRAW and PRAW used the IDs to 
+      search through Reddit, find the posts of interest, and scrape the body of these posts.</p>
     
     <p>Before beginning any analysis, the datasets needed to be pre-processed. First, any rows that contained a null 
       value for the body column were removed. After the removal of the rows, the Opiates dataset consists of 31,815 
