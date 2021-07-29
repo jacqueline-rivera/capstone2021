@@ -85,7 +85,8 @@
       (<a href="https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-latent-dirichlet-allocation-437c81220158">Here is a link</a>
       that provides information on LDA) On the left hand side of these visuals, the size of the bubbles tells us the percentage of all tokens, 
       or all words, that the bubble represents. On the right hand side, we have the top 30 most relevant words for the selected topic. The
-      bars next to the words tell us that count of the word in the topic (red) and in the entire dataset (red + blue).
+      bars next to the words tell us that count of the word in the topic (red) and in the entire dataset (red + blue). The following interpretation
+      of the results of topic modeling was done at a relevance metric of 0.2.
     </p>
     
     <h3>Opiates</h3>
@@ -130,10 +131,18 @@ if(typeof(LDAvis) !== "undefined"){
          });
 }
 </script>
-
-    <p>explain topics</p>
+    <p>Opiates Topics:</p>
     <ol>
-      <li>First topic</li>
+      <li>Contains words related to withdrawal and represents 30% of all tokens. Words included are "taper", "withdrawal", 
+      "pain", "craving", and "turkey"</li>
+      <li>Contains words related to everyday life and represents 29.7% of all tokens. Words included are "car", "house", 
+      "friend", "money", and "kid"</li>
+      <li>Contains words related to drugs and represents 16.7% of all tokens. Words included in this topic are "mg", 
+      "tolerance", "codeine", "oxy", and "morphine"</li>
+      <li>Contains words related to the body and represents 12.2% of all tokens. Words included in this topic are "vein", 
+      "arm", "blood", "shot", and "skin"</li>
+      <li>Contains words related to techniques and represents 11.5% of all tokens. Words included in this topic are "filter", 
+      "spoon", "heat", "foil", and "powder"</li>
     </ol>
     
     
